@@ -291,6 +291,7 @@ input[type="checkbox"]:checked + label:after {
 .task-details {
 	display: flex;
 	flex-direction: row;
+	width: 100%;
 }
 .task-div {
 	flex-wrap: wrap;

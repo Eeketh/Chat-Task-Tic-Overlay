@@ -216,6 +216,8 @@ function addTasksToDom(username, userColor, task, completed, progress) {
 
 	if (configs.styles.usernameColor == "") {
 		usernameDiv.style.color = userColor;
+	}else{
+		console.log(configs.styles.usernameColor);
 	}
 
 	newTask.appendChild(usernameDiv);

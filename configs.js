@@ -58,7 +58,7 @@ const configs = (function () {
 
 	// task (individual tasks)
 	const numberOfLines = 2; // number of lines for the task
-	const usernameColor = "white"; // hex or name, "" for twitch username color
+	const usernameColor = ""; // hex or name, "" for twitch username color
 	const usernameMaxWidth = "150px"; // must have px at the end
 
 	const taskBackgroundColor = "#000"; // hex only
