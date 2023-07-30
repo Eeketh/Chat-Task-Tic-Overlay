@@ -69,7 +69,29 @@ ComfyJS.onCommand = (user, command, message, flags, extra) => {
 			// check if user has a task pending
 			return respond(responseTemplates.noTaskToEdit, user);
 		}
-		let progress = parseInt(message);
+		
+		var regEx = /(\d+)\/(\d+)/;
+		let progress = 0;
+		
+		if (regEx.test(message))
+		{			
+			let progParts = regEx.exec(message);
+			if (progParts[1]==progParts[2])
+			{
+				progress = 100;
+			}
+			else
+			{
+				progress = (progParts[1]/progParts[2]) * 100;
+				progress = Math.round(progress);
+				if (progress == Infinity) progress = NaN;
+				if (progress>99) progress = 99;
+			}
+		}
+		else
+		{
+			progress = parseInt(message);
+		}
 		
 		if (isNaN(progress)) {
 			return respond(responseTemplates.invalidProgress);

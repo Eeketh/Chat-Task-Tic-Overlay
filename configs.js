@@ -228,7 +228,7 @@ const configs = (function () {
 	const clearedAll = "All tasks have been cleared";
 	const clearedDone = "All finished tasks have been cleared";
 	const help = `{user} Use the following commands to help you out - !task !remove !edit !done. For more commands, click here: https://github.com/liyunze-coding/Chat-Task-Tic-Overlay#commands`;
-	const invalidProgress = "Sorry, that's not a valid progress amount. It must be a number between 1 and 100.";
+	const invalidProgress = "Sorry, that's not a valid progress amount. It must be a number between 1 and 100, an increase/decrease (e.g. +20), or a fraction (e.g. 15/30)";
 	const taskProgress = `{user} is now {task}% complete with their task!`;
 
 	const additionalCommands = {
